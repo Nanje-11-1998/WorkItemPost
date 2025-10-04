@@ -7,10 +7,10 @@ variables:
   OUTAGE_DURATION_MINUTES: 240  # ⏱️ Outage duration (e.g., from AI agent in real case)
   SLA_THRESHOLD_MINUTES: 180    # 🛡️ SLA/threshold for maximum acceptable outage time
   TITLE: 'Outage Mitigation Time Exceeded Please fix this'
-  ASSIGNED_TO: ''  # 🔧 Update with valid user email in Azure DevOps
+  ASSIGNED_TO: 'ikwenanje@gmail.com'  # 🔧 Update with valid user email in Azure DevOps
   TAGS: 'Outage;HighPriority;SLA'
-  ORG_URL: ''
-  PROJECT: ''
+  ORG_URL: 'https://dev.azure.com/ikwenanje/'
+  PROJECT: 'My%20First%20Project'
   WORKITEM_TYPE: 'Task'
 
 steps:
@@ -54,7 +54,7 @@ steps:
         echo "$payload"
 
         # Compose API URL
-        api_url="${ORG_URL}First%20Project%20In%20ADO/_apis/wit/workitems/\$${WORKITEM_TYPE}?api-version=7.1-preview.3"
+        api_url="${ORG_URL}My%20First%20Project/_apis/wit/workitems/\$${WORKITEM_TYPE}?api-version=7.1-preview.3"
         echo "🌐 API: $api_url"
 
         # Send API request
